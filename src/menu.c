@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <time.h>
+#include <math.h>
 #include "func.h"
 
 void prim();
@@ -33,7 +34,7 @@ int main() {
             case 'S':  {
 
                 system("clear");
-                
+                zap(a);
                 printf("\n");
                 printf("P.Rules\n");
                 printf("Q.Quit\n");

@@ -1,5 +1,5 @@
-#ifndef __COLOR_H__
-#define __COLOR_H__
+#ifndef __FUNC_H__
+#define __FUNC_H__
 
     #define RESET "\033[0m"
     #define GREEN "\033[1;32m"
@@ -8,5 +8,6 @@
     #define GRAY  "\033[2m"
     #define YELLOW "\033[0;33m"
     #define MAGENTA "\033[0;35m"
-
+   void printmass(int a[], int n);
+   void zap (int a[]);
 #endif
