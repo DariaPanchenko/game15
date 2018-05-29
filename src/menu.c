@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <time.h>
 #include <math.h>
+#include <unistd.h>
 #include "func.h"
 
 void prim();
@@ -35,6 +36,7 @@ int main() {
 
                 system("clear");
                 zap(a);
+                move(a);
                 printf("\n");
                 printf("P.Rules\n");
                 printf("Q.Quit\n");
@@ -52,7 +54,7 @@ int main() {
             
             if (c!=10) {
                   system("clear");
-                    printf("\tНе верное значене. Введите p(Правила) s(Старт) или q(Выход)\n");
+                    printf("\tНе верное значение. Введите p(Правила) s(Старт) или q(Выход)\n");
                 printf("\n");
                 break;
             }

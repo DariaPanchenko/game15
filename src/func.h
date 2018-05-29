@@ -10,4 +10,7 @@
     #define MAGENTA "\033[0;35m"
    void printmass(int a[], int n);
    void zap (int a[]);
+   int generater(int z_i);
+   void move(int a[]);
+   
 #endif
