@@ -37,6 +37,8 @@ int main() {
                 system("clear");
                 zap(a);
                 move(a);
+                umove(a);
+                victory(a);
                 printf("\n");
                 printf("P.Rules\n");
                 printf("Q.Quit\n");
