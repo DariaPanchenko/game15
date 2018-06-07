@@ -24,11 +24,11 @@ build/generater.o: src/generater.c
 build/move.o: src/move.c
 		$(CC) $(CFLAGS) -c src/move.c -o build/move.o -lm
 
-build/umove.o: src/umove.c
-		$(CC) $(CFLAGS) -c src/umove.c -o build/umove.o -lm
-
 build/victory.o: src/victory.c
 		$(CC) $(CFLAGS) -c src/victory.c -o build/victory.o -lm
+
+build/umove.o: src/umove.c
+		$(CC) $(CFLAGS) -c src/umove.c -o build/umove.o -lm
 
 build:
 	mkdir build

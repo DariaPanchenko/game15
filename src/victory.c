@@ -1,3 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <unistd.h>
+#include "func.h"
 int victory(int a[])
 { 
     int v, i;

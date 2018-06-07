@@ -1,10 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <unistd.h>
+#include "func.h"
 int umove(int a[]){
-	int m,T=0,i,j,u,n,v,flag=0;
+	int m,T=0,i,j,u,n,v;
 	
 	while(1){
 	
 	printf("\nВведите значение:\n");
-        scanf("%d", &n);
+        if (scanf("%d", &n) != 1) 
+         { 
+          while (fgetc(stdin) != '\n'); 
+         continue; 
+        }
       
          for (i = 0; i < 16; i++) {
             if (a[i] == 0 ) u = i;
@@ -76,24 +86,29 @@ int umove(int a[]){
             T++;
 		}	
 		
-		system("cls");
+		system("clear");
                 printmass(a,4);
                  printf("\n");
             printf("Количество ваших ходов:%d",T);
-            flag = 1;
             
               if (n == 0)
             return 0;
-
+            
         else { if(n>15)
                 printf("\nВведите число 1-15"); 
-            flag = 0;
+            
         }
          v = victory(a);
         if (v == 15) {
             printf("\nПоздравляем, Вы прошли игру!");
             break;
         }
-        
-	}
+       
 }
+return 0;
+}
+
+	
+
+
+
