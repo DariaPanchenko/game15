@@ -1,5 +1,5 @@
 int umove(int a[]){
-	int m,T=0,i,j,u,n,w,flag=0;
+	int m,T=0,i,j,u,n,v,flag=0;
 	
 	while(1){
 	
@@ -89,8 +89,8 @@ int umove(int a[]){
                 printf("\nВведите число 1-15"); 
             flag = 0;
         }
-         w = victory(a);
-        if (w == 15) {
+         v = victory(a);
+        if (v == 15) {
             printf("\nПоздравляем, Вы прошли игру!");
             break;
         }
