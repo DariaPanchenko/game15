@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS  = -Wall -Werror -std=c99
-OBJ = build/menu.o build/printmass.o build/zap.o build/generater.o build/move.o
+OBJ = build/menu.o build/printmass.o build/zap.o build/generater.o build/move.o build/umove.o
 
 .PHONY: clean open
 
@@ -23,6 +23,9 @@ build/generater.o: src/generater.c
 
 build/move.o: src/move.c
 		$(CC) $(CFLAGS) -c src/move.c -o build/move.o -lm
+
+build/umove.o: src/umove.c
+		$(CC) $(CFLAGS) -c src/umove.c -o build/umove.o -lm
 
 build:
 	mkdir build
