@@ -9,8 +9,7 @@
 void move(int a[])
 {   
     int n, i = 0, m, T=0,L=0;
-    for (T = 0; T < 30; T++){
-        sleep(1);
+    for (T = 0; T < 100; T++){
         printf("\n");
         i = 0;
         while (a[i] != 0){
@@ -24,7 +23,7 @@ void move(int a[])
         a[i] = m;
 
        system("clear");
-        printmass(a, 4);
+        printmass(a, 4, 1);
        printf("перемешиваний: %d",L);
        
     }

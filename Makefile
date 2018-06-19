@@ -1,10 +1,15 @@
 CC = gcc
 CFLAGS  = -Wall -Werror -std=c99
 OBJ = build/menu.o build/printmass.o build/zap.o build/generater.o build/move.o build/umove.o build/victory.o
+OB = build/main_test.o build/printmass.o build/zap.o build/generater.o build/move.o build/umove.o build/victory.o
 
-.PHONY: clean open
 
-default: build bin bin/game
+.PHONY: clean open test
+
+default: build bin bin/game bin/game-test test
+
+test: bin/game-test
+	 bin/game-test
 
 bin/game: $(OBJ)
 		$(CC) $(CFLAGS) $(OBJ) -o bin/game -lm
@@ -29,6 +34,12 @@ build/victory.o: src/victory.c
 
 build/umove.o: src/umove.c
 		$(CC) $(CFLAGS) -c src/umove.c -o build/umove.o -lm
+
+bin/game-test: $(OB)
+	$(CC) $(CFLAGS) $(OB) -o bin/game-test -lm
+
+build/main_test.o: test/main.c thirdparty/ctest.h src/func.h 
+	$(CC) $(CFLAGS) -I thirdparty -I src -c ./test/main.c -o ./build/main_test.o -lm
 
 build:
 	mkdir build

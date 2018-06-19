@@ -8,7 +8,7 @@
     #define GRAY  "\033[2m"
     #define YELLOW "\033[0;33m"
     #define MAGENTA "\033[0;35m"
-   void printmass(int a[], int n);
+   int printmass(int a[], int n, int test);
    void zap (int a[]);
    int generater(int z_i);
    void move(int a[]);

@@ -87,7 +87,7 @@ int umove(int a[]){
 		}	
 		
 		system("clear");
-                printmass(a,4);
+                printmass(a,4,1);
                  printf("\n");
             printf("Количество ваших ходов:%d",T);
             
