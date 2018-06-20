@@ -2,113 +2,46 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <math.h>
-#include <unistd.h>
 #include "func.h"
-int umove(int a[]){
-	int m,T=0,i,j,u,n,v;
-	
-	while(1){
-	
-	printf("\nВведите значение:\n");
-        if (scanf("%d", &n) != 1) 
-         { 
-          while (fgetc(stdin) != '\n'); 
-         continue; 
-        }
-      
-         for (i = 0; i < 16; i++) {
-            if (a[i] == 0 ) u = i;
-            if (a[i] == n) j = i;
-        }
+int umove(int a[])
+{
+  int m, i, j, u, n, v;
 
-	      if(u==15&&((j==u-1)||(j==u-4)))	{
-        		m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            T++;
-		}
+  while (1)
+  {
+    printf("\nВведите значение:\n");
+    if (scanf("%d", &n) != 1)
+    {
+      while (fgetc(stdin) != '\n')
+        ;
+      continue;
+    }
 
-		
-		 if(((u==14)||(u==13))&&((j==u-1)||(j==u-4)||(j==u+1))) {
-        		m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            T++;	
-	    	}
-	    	
-	      if(u==12&&((j==u+1)||(j==u-4)))	{
-        		m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            T++;
-		}	
+    for (i = 0; i < 16; i++)
+    {
+      if (a[i] == 0)
+        u = i;
+      if (a[i] == n)
+        j = i;
+    }
 
-		if(((u==11)||(u==7))&&((j==u-1)||(j==u-4)||(j==u+4))){
-        		m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            T++;
-		}	
-		
-		if(((u==8)||(u==4))&&((j==u+1)||(j==u-4)||(j==u+4))){
-        		m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            T++;
-		}	
-		
-		if(u==0&&((j==u+1)||(j==u+4))){
-        		m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            T++;
-		}	
-		
-		
-		if(u==3&&((j==u-1)||(j==u+4)))	{
-        		m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            T++;
-		}	
-		
-		if(((u==1)||(u==2))&&((j==u-1)||(j==u+1)||(j==u+4))){
-        		m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            T++;
-		}	
-		
-		if(((u==5)||(u==6)||(u==9)||(u==10))&&((j==u-1)||(j==u+1)||(j==u+4)||(j==u-4))){
-        		m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            T++;
-		}	
-		
-		system("clear");
-                printmass(a,4,1);
-                 printf("\n");
-            printf("Количество ваших ходов:%d",T);
-            
-              if (n == 0)
-            return 0;
-            
-        else { if(n>15)
-                printf("\nВведите число 1-15"); 
-            
-        }
-         v = victory(a);
-        if (v == 15) {
-            printf("\nПоздравляем, Вы прошли игру!");
-            break;
-        }
-       
+    if ((j >= 0) && (j <= 15) && ((abs(j / 4 - u / 4) == 0 && abs(j % 4 - u % 4) <= 1) || (abs(j / 4 - u / 4) <= 1 && abs(j % 4 - u % 4) == 0)))
+    {
+      m = a[u];
+      a[u] = a[j];
+      a[j] = m;
+    }
+    system("clear");
+    printmass(a, 4, 1);
+    if (n == 0)
+      return 0;
+
+    v = victory(a);
+    if (v == 14)
+    {
+      printf("Поздравляем,вы прошли игру!");
+      break;
+    }
+  }
+  return 0;
 }
-return 0;
-}
-
-	
-
-
-

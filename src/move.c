@@ -3,13 +3,12 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <math.h>
-#include <unistd.h>
 #include "func.h"
 
 void move(int a[])
 {   
     int n, i = 0, m, T=0,L=0;
-    for (T = 0; T < 100; T++){
+    for (T = 0; T < 30; T++){
         printf("\n");
         i = 0;
         while (a[i] != 0){

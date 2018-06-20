@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <math.h>
-#include <unistd.h>
 #include "func.h"
 void zap (int a[]){
     int i;

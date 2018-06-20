@@ -4,7 +4,6 @@
 #include <ctype.h>
 #include <time.h>
 #include <math.h>
-#include <unistd.h>
 #include "func.h"
 
 void prim();
@@ -38,7 +37,6 @@ int main() {
                 zap(a);
                 move(a);
                 umove(a);
-                victory(a);
                 printf("\n");
                 printf("S.Start\n");
                 printf("P.Rules\n");

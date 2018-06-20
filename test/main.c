@@ -3,14 +3,12 @@
 #include <func.h>
 #include <ctest.h>
 
+
 CTEST(printmass, Correct_printmass)
-{
-    int a[16], i, j = 0;
-    for (i = 1; i < 16; i++) {
-        a[j] = i;
-        j++;
-    }	
-    a[15] = 0;
+{   int a[16], i;
+    for (i = 0; i <= 15; i++) {
+        a[i] = (i + 1) % 16;
+   }
     int result = printmass(a,4,0);
     int expect = 1;
     ASSERT_EQUAL(expect, result);
@@ -18,12 +16,10 @@ CTEST(printmass, Correct_printmass)
 
 CTEST(printmass, Incorrect_printmass)
 {
-int a[16], i, j = 0;
-    for (i = 1; i < 16; i++) {
-        a[j] = i;
-        j++;
-    }	
-    a[15] = 0;
+ int a[16], i;
+    for (i = 0; i <= 15; i++) {
+        a[i] = (i + 1) % 16;
+   }
     a[9] = 7;
     int result = printmass(a,4,0);
     int expect = 0;
