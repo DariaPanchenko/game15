@@ -36,12 +36,10 @@ int umove(int a[])
     if (n == 0)
       return 0;
 
-    v = victory(a);
-    if (v == 14)
-    {
-      printf("Поздравляем,вы прошли игру!");
+    v = victory(a, 1);
+    if (v == 1)
       break;
-    }
   }
+
   return 0;
 }
