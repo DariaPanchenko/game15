@@ -36,7 +36,7 @@ int main() {
                 system("clear");
                 zap(a);
                 move(a);
-                umove(a);
+                umove(a,0);
                 printf("\n");
                 printf("S.Start\n");
                 printf("P.Rules\n");
