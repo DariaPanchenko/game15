@@ -12,10 +12,11 @@ int generater(int z_i)
 	{
 		tmp[i] = i;
 	}
+	int new_index;
 	while (res == 0)
 	{
-		int index = tmp[rand() % (4 - k) + k];
-		int new_index;
+		int num = rand() % (4 - k) + k;
+		int index = tmp[num];
 		if (index == 0)
 		{
 			new_index = z_i - 4;
@@ -38,8 +39,8 @@ int generater(int z_i)
 			break;
 		}
 		int m = tmp[k];
-		tmp[k] = tmp[index];
-		tmp[index] = m;
+		tmp[k] = tmp[num];
+		tmp[num] = m;
 		k++;
 	}
 	return res;
