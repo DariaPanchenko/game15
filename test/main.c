@@ -52,6 +52,30 @@ CTEST(umove, Incorrect_umove)
     ASSERT_EQUAL(expect, result);
 }
 
+CTEST(umove, more)
+{
+    int a[16];	
+    a[0] = 6; a[1] = 4; a[2] = 3; a[3] = 10;
+    a[4] = 2; a[5] = 11; a[6] = 1; a[7] = 7;
+    a[8] = 14; a[9] = 12; a[10] = 5; a[11] = 8;
+    a[12] = 5; a[13] = 9; a[14] = 13; a[15] = 0;
+    int result = umove(a,77);
+    int expect = 0;
+    ASSERT_EQUAL(expect, result);	
+}
+
+CTEST(umove,otriz)
+{
+    int a[16];	
+    a[0] = 6; a[1] = 4; a[2] = 3; a[3] = 10;
+    a[4] = 2; a[5] = 11; a[6] = 1; a[7] = 7;
+    a[8] = 14; a[9] = 12; a[10] = 5; a[11] = 8;
+    a[12] = 5; a[13] = 9; a[14] = 13; a[15] = 0;
+    int result = umove(a,-1);
+    int expect = 0;
+    ASSERT_EQUAL(expect, result);	
+}
+
 CTEST(victory, Correct_victory)
 {
     int a[16], i;

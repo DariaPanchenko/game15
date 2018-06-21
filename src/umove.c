@@ -23,6 +23,10 @@ int umove(int a[], int test)
       n = 13;
     if (test == 9)
       n = 9;
+    if (test == 77)
+      n = 77;
+    if (test == -1)
+      n = -1;
 
     for (i = 0; i < 16; i++)
     {
@@ -43,7 +47,7 @@ int umove(int a[], int test)
             f = 1;      
 		}
 
-      else if (n == 0)
+       if (n == 0)
        break;
             
            else { if (test == 0) 
