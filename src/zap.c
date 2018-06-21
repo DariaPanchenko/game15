@@ -3,12 +3,13 @@
 #include <locale.h>
 #include <math.h>
 #include "func.h"
-void zap (int a[]){
+void zap(int a[])
+{
     int i;
-    for (i = 0; i <= 15; i++) {
+    for (i = 0; i <= 15; i++)
+    {
         a[i] = (i + 1) % 16;
-   }
+    }
 
     printmass(a, 4, 1);
 }
-

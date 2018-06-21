@@ -15,7 +15,8 @@ int umove(int a[], int test)
       printf("\nВведите значение:\n");
       if (scanf("%d", &n) != 1)
       {
-        while (fgetc(stdin) != '\n');
+        while (fgetc(stdin) != '\n')
+          ;
         continue;
       }
     }
@@ -36,29 +37,31 @@ int umove(int a[], int test)
         j = i;
     }
 
-        if ((j >= 0) && (j<= 15) && ((abs(j / 4 - u / 4) == 0 && abs(j % 4 - u% 4) <= 1)
-			|| (abs(j / 4 - u/ 4) <= 1 && abs(j % 4 - u % 4) == 0))) {
-			m = a[u];
-            a[u] = a[j];
-            a[j] = m;
-            system("clear");
-            if (test == 0)
-                printmass(a,4, 1);
-            f = 1;      
-		}
+    if ((j >= 0) && (j <= 15) && ((abs(j / 4 - u / 4) == 0 && abs(j % 4 - u % 4) <= 1) || (abs(j / 4 - u / 4) <= 1 && abs(j % 4 - u % 4) == 0)))
+    {
+      m = a[u];
+      a[u] = a[j];
+      a[j] = m;
+      system("clear");
+      if (test == 0)
+        printmass(a, 4, 1);
+      f = 1;
+    }
 
-       if (n == 0)
-       break;
-            
-           else { if (test == 0) 
-            f = 0;
-        }
-     
-    v = victory(a,1);
+    if (n == 0)
+      break;
+
+    else
+    {
+      if (test == 0)
+        f = 0;
+    }
+
+    v = victory(a, 1);
     if (v == 1)
-    break;
-     if (test != 0) 
-            break;
+      break;
+    if (test != 0)
+      break;
   }
 
   if (f == 1)
@@ -66,8 +69,3 @@ int umove(int a[], int test)
   else
     return 0;
 }
-
-	
-
-
-
