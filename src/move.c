@@ -31,7 +31,7 @@ void move(int a[])
         L++;
         a[i] = m;
 
-        system("clear");
+        system("tput reset");
         printmass(a, 4, 1);
         printf("перемешиваний: %d", L);
     }

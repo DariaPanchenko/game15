@@ -42,7 +42,7 @@ int umove(int a[], int test)
       m = a[u];
       a[u] = a[j];
       a[j] = m;
-      system("clear");
+      system("tput reset");
       if (test == 0)
         printmass(a, 4, 1);
       f = 1;
