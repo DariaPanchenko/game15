@@ -20,14 +20,19 @@ int printmass(int a[], int n, int test)
   {
     for (i = 0; i < n * n; i++)
     {
-      printf("%d\t", a[i]);
+      if (a[i] != 0)
+        printf("%s[%s%d%s]%s\t", CYAN, RESET, a[i], CYAN, RESET);
+
+      else if (a[i] == 0)
+      {
+        printf("%s[%s%d%s]%s\t", RED, RESET, 0, RED, RESET);
+      }
       if ((i + 1) % n == 0)
       {
         printf("\n");
       }
     }
   }
-
   if (h == 0)
     return 1;
   else

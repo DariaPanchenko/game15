@@ -17,7 +17,7 @@ int victory(int a[], int test)
   {
     if (test != 0)
     {
-      printf("Поздравляю,вы прошли игру!");
+      printf("%sПоздравляю,вы прошли игру!%s",GREEN,RESET);
     }
     return 1;
   }
