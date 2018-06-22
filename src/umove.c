@@ -5,7 +5,7 @@
 #include "func.h"
 int umove(int a[], int test)
 {
-  int m, i, j, u, n, v, f = 0;
+  int m, i, j, u, n, v, f = 0,L=0;
 
   while (1)
   {
@@ -42,9 +42,12 @@ int umove(int a[], int test)
       m = a[u];
       a[u] = a[j];
       a[j] = m;
+      L++;
       system("tput reset");
       if (test == 0)
         printmass(a, 4, 1);
+         printf("Количество ваших ходов:%d",L);
+         printf("\n");
       f = 1;
     }
 
