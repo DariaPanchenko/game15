@@ -28,6 +28,17 @@ CTEST(printmass, Incorrect_printmass)
     ASSERT_EQUAL(expect, result);
 }
 
+CTEST(generation, Correct_generation)
+{  int a[16],i,result = 0;   
+    for (i = 0; i <= 5; i++)
+{     
+     a[i] = (i + 1) % 16;
+     result+=move(a, generater(i));  
+}
+   int expect =6;
+   ASSERT_EQUAL(expect, result);
+}
+
 CTEST(umove, Correct_umove)
 {   
     int a[16];	

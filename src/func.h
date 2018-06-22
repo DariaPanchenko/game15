@@ -12,7 +12,7 @@ int printmass(int a[], int n, int test);
 void zap(int a[]);
 int generater(int z_i);
 void delay();
-void move(int a[]);
+int move(int a[], int test);
 int victory(int a[], int test);
 int umove(int a[], int test);
 

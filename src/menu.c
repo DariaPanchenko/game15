@@ -35,7 +35,7 @@ int main() {
 
                 system("clear");
                 zap(a);
-                move(a);
+                move(a,1);
                 umove(a,0);
                 printf("\n");
                 printf("S.Start\n");
